@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <Header />
       <section className="bg-[#F8F8FD] flow-root">
-        <div className="wrapper mt-4 lg:mt-20.5">
+        <div className="wrapper mt-4 lg:mt-20.5 mb-4 lg:mb-25.75">
           <h1 className="mb-5.75">
             Discover <br /> more than <br />
             <span className="text-[#26A4FF]">5000+ Jobs</span>
@@ -16,6 +16,9 @@ export default function Home() {
             heights and passionate about startups.
           </p>
           <SearchBar />
+          <p className="text-[16px] font-medium">
+            Popular : UI Designer, UX Researcher, Android, Admin
+          </p>
         </div>
       </section>
     </main>
