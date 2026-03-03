@@ -9,28 +9,28 @@
   font-weight: 600;
 }
 
-@theme {
-  --breakpoint-xl: 90rem;
+:root {
+  --text-base: 1.125rem;
+  --text-lg: 2rem;
+  --text-xl: 3rem;
+}
 
+@media (min-width: 90rem) {
+  :root {
+    --text-base: 1.25rem;
+    --text-lg: 3rem;
+    --text-xl: 4.5rem;
+  }
+}
+
+@theme {
+  --breakpoint-lg: 90rem;
   --color-body: hsla(220, 16%, 38%, 1);
   --color-heading: hsla(219, 34%, 22%, 1);
-
-  --text-*: initial;
-  --text-base: 1.125rem; /* 18px */
-  --text-lg: 2rem; /* 32px */
-  --text-xl: 3rem; /* 48px */
 }
 
 @theme inline {
   --font-logo: var(--font-red-hat-display);
-}
-
-@media (min-width: 90rem) {
-  @theme {
-    --text-base: 1.25rem; /* 20px */
-    --text-lg: 3rem; /* 48px */
-    --text-xl: 4.5rem; /* 72px */
-  }
 }
 
 @layer base {
@@ -40,17 +40,24 @@
     font-size: var(--text-base);
     line-height: 1.6;
   }
+
   h1,
   h2 {
     font-family: "Clash Display";
     color: var(--color-heading);
     line-height: 1.1;
   }
+
   h1 {
     font-size: var(--text-xl);
   }
+
   h2 {
     font-size: var(--text-lg);
+  }
+
+  button {
+    cursor: pointer;
   }
 }
 

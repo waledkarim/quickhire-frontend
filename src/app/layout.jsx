@@ -3,14 +3,14 @@ import "./globals.css";
 
 const epilogue = Epilogue({
   variable: "--font-epilogue",
-  weight: ["400"],
+  weight: ["400", "500", "700"],
   style: "normal",
   subsets: ["latin"],
 });
 
 const redHatDisplay = Red_Hat_Display({
   variable: "--font-red-hat-display",
-  weight: ["600"],
+  weight: ["600", "700"],
   subsets: ["latin"],
 });
 
