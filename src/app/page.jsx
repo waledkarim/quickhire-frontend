@@ -1,4 +1,5 @@
 import CategoryCards from "@components/CategoryCards";
+import FeaturedJobs from "@components/FeaturedJobs";
 import Header from "@components/Header";
 import RightArrow from "@components/icons/RightArrow";
 import SearchBar from "@components/Search";
@@ -6,6 +7,7 @@ import categories from "@data/Categories";
 import companies from "@data/Companies";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -103,6 +105,29 @@ export default function Home() {
             />
           </div>
         </div>
+      </section>
+
+      <section className="wrapper py-10 lg:py-0 lg:pt-18">
+        <div className="flex justify-between items-center mb-6 lg:mb-12">
+          <h2>
+            Featured <span className="text-[#26A4FF]">jobs</span>{" "}
+          </h2>
+          <Link
+            href={"/"}
+            className="hidden lg:flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
+          >
+            <span>Show all jobs</span>
+            <RightArrow />
+          </Link>
+        </div>
+        <FeaturedJobs />
+        <Link
+          href={"/"}
+          className="lg:hidden flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
+        >
+          <span>Show all jobs</span>
+          <RightArrow />
+        </Link>
       </section>
     </main>
   );

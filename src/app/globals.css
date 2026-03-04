@@ -81,6 +81,19 @@
     }
   }
 
+  .featuredjobs-grid {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+  }
+
+  @media (min-width: 90rem) {
+    .featuredjobs-grid {
+      grid-auto-flow: row;
+      grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+    }
+  }
+
   .even-columns {
     display: grid;
     grid-template-columns: subgrid;
