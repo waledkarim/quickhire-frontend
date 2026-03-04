@@ -22,7 +22,7 @@ export default function SearchBar() {
           <option value="dhaka">Dhaka, Bangladesh</option>
         </select>
       </label>
-      <button className="bg-[#4640DE] text-white font-bold py-3.5 px-6.75">
+      <button className="bg-[#4640DE] text-white font-bold py-3.5 px-6.75 grow">
         Search my Job
       </button>
     </form>

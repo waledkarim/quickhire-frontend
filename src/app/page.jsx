@@ -1,5 +1,7 @@
 import Header from "@components/Header";
 import SearchBar from "@components/Search";
+import companies from "data/Companies";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -19,6 +21,19 @@ export default function Home() {
           <p className="text-[16px] font-medium">
             Popular : UI Designer, UX Researcher, Android, Admin
           </p>
+        </div>
+      </section>
+      <section className="py-10 px-4 lg:py-12 lg:px-30.5">
+        <p className="mb-8">Companies we helped to grow:</p>
+        <div className="flex flex-wrap items-center gap-5 justify-between">
+          {companies.map((company, i) => (
+            <Image
+              key={i}
+              width={company.width}
+              height={company.height}
+              src={company.src}
+            />
+          ))}
         </div>
       </section>
     </main>
