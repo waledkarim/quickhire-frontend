@@ -3,7 +3,7 @@ import "./globals.css";
 
 const epilogue = Epilogue({
   variable: "--font-epilogue",
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
   style: "normal",
   subsets: ["latin"],
 });

@@ -42,7 +42,8 @@
   }
 
   h1,
-  h2 {
+  h2,
+  h5 {
     font-family: "Clash Display";
     color: var(--color-heading);
     line-height: 1.1;
@@ -65,5 +66,18 @@
   .wrapper {
     width: min(100% - 1rem, 74.5rem);
     margin-inline: auto;
+  }
+}
+
+@layer components {
+  .card-grid {
+    display: grid;
+    gap: 32px;
+  }
+
+  @media (min-width: 90rem) {
+    .card-grid {
+      grid-template-columns: repeat(auto-fit, minmax(274px, 1fr));
+    }
   }
 }
