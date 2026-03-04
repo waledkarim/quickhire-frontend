@@ -70,14 +70,50 @@
 }
 
 @layer components {
-  .card-grid {
+  .category-grid {
     display: grid;
     gap: 32px;
   }
 
   @media (min-width: 90rem) {
-    .card-grid {
+    .category-grid {
       grid-template-columns: repeat(auto-fit, minmax(274px, 1fr));
     }
+  }
+
+  .even-columns {
+    display: grid;
+    grid-template-columns: subgrid;
+    /* grid-auto-rows: 1fr; */
+    gap: 1rem;
+  }
+
+  @media (min-width: 90rem) {
+    .even-columns {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: auto;
+    }
+  }
+
+  .bleed-wrapper {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(20rem, 74.5rem) minmax(
+        1rem,
+        1fr
+      );
+  }
+
+  .bevel {
+    clip-path: polygon(
+      20% 0%,
+      100% 0,
+      100% 20%,
+      100% 91%,
+      80% 100%,
+      0 100%,
+      0% 80%,
+      0 10%
+    );
   }
 }
