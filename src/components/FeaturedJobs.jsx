@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function FeaturedJobs() {
+export default async function FeaturedJobs() {
   return (
     <div className="featuredjobs-grid mb-6 lg:mb-0 overflow-x-auto lg:overflow-x-hidden">
       <div className="p-6 w-71.5 h-70.75 border border-[#D6DDEB]">

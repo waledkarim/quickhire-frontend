@@ -2,6 +2,7 @@ import CategoryCards from "@components/CategoryCards";
 import FeaturedJobs from "@components/FeaturedJobs";
 import Header from "@components/Header";
 import RightArrow from "@components/icons/RightArrow";
+import LatestJobs from "@components/LatestJobs";
 import SearchBar from "@components/Search";
 import categories from "@data/Categories";
 import companies from "@data/Companies";
@@ -77,7 +78,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="bg-white bleed-wrapper">
+      <section className="bg-white bleed-wrapper lg:py-18">
         <div className="even-columns bevel h-160 lg:h-103.5 bg-[#4640DE] col-span-full lg:col-start-2 lg:col-end-3">
           <div className="text-center place-self-center max-w-90.5 col-start-2 col-span-1 lg:col-start-1 lg:col-span-1">
             <h2 className="text-white mb-4 lg:mb-6">
@@ -107,7 +108,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="wrapper py-10 lg:py-0 lg:pt-18">
+      <section className="wrapper py-10 lg:py-0 lg:pb-18">
         <div className="flex justify-between items-center mb-6 lg:mb-12">
           <h2>
             Featured <span className="text-[#26A4FF]">jobs</span>{" "}
@@ -128,6 +129,24 @@ export default function Home() {
           <span>Show all jobs</span>
           <RightArrow />
         </Link>
+      </section>
+
+      <section className="one-cut-corner bg-[#F8F8FD] pt-18 lg:pt-24">
+        <div className="wrapper">
+          <div className="flex justify-between items-center mb-6 lg:mb-12">
+            <h2>
+              Latest <span className="text-[#26A4FF]">jobs open</span>{" "}
+            </h2>
+            <Link
+              href={"/"}
+              className="hidden lg:flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
+            >
+              <span>Show all jobs</span>
+              <RightArrow />
+            </Link>
+          </div>
+          <LatestJobs />
+        </div>
       </section>
     </main>
   );
