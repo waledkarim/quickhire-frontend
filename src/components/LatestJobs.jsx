@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function LatestJobs() {
+export default async function LatestJobs() {
   return (
-    <div className="latestjobs-grid">
+    <div className="latestjobs-grid mb-10 lg:mb-15">
       <div className="p-4 bg-white flex flex-col gap-6 lg:flex-row">
         <div>
           <Image width={48} height={48} src={"/images/company-logo-jobs.png"} />

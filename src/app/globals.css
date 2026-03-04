@@ -106,26 +106,26 @@
     }
   }
 
-  .even-columns {
-    display: grid;
-    grid-template-columns: subgrid;
-    gap: 1rem;
-  }
-
-  @media (min-width: 90rem) {
-    .even-columns {
-      grid-template-columns: none;
-      grid-auto-flow: column;
-      grid-auto-columns: auto;
-    }
-  }
-
   .bleed-wrapper {
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) minmax(20rem, 74.5rem) minmax(
         1rem,
         1fr
       );
+  }
+
+  .bleed-wrapper-even-columns {
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 90rem) {
+    .bleed-wrapper-even-columns {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: auto;
+    }
   }
 
   .bevel {
