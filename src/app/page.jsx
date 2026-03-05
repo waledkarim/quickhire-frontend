@@ -52,7 +52,7 @@ export default function Home() {
             Explore by <span className="text-[#26A4FF]">category</span>{" "}
           </h2>
           <Link
-            href={"/"}
+            href={"/jobs"}
             className="hidden lg:flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
           >
             <span>Show all jobs</span>
@@ -70,7 +70,7 @@ export default function Home() {
           ))}
         </div>
         <Link
-          href={"/"}
+          href={"/jobs"}
           className="lg:hidden flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
         >
           <span>Show all jobs</span>
@@ -114,7 +114,7 @@ export default function Home() {
             Featured <span className="text-[#26A4FF]">jobs</span>{" "}
           </h2>
           <Link
-            href={"/"}
+            href={"/jobs"}
             className="hidden lg:flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
           >
             <span>Show all jobs</span>
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
         <FeaturedJobs />
         <Link
-          href={"/"}
+          href={"/jobs"}
           className="lg:hidden flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
         >
           <span>Show all jobs</span>
@@ -138,7 +138,7 @@ export default function Home() {
               Latest <span className="text-[#26A4FF]">jobs open</span>{" "}
             </h2>
             <Link
-              href={"/"}
+              href={"/jobs"}
               className="hidden lg:flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
             >
               <span>Show all jobs</span>
