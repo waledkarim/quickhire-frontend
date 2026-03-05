@@ -18,7 +18,7 @@ export default function Header() {
           <nav className="hidden lg:block">
             <ul className="flex items-center gap-x-4 text-[16px] text-[#515B6F] font-medium">
               <li>
-                <Link href={"/"}>Find jobs</Link>
+                <Link href={"/jobs"}>Find jobs</Link>
               </li>
               <li>
                 <Link href={"/"}>Browse Companies</Link>
