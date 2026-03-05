@@ -10,6 +10,8 @@ export default async function JobListingPage({ searchParams }) {
   const q = params?.q || "";
   const location = params?.location || "";
 
+  console.log("Q: ", q, "Location: ", location);
+
   return (
     <main>
       <Header />

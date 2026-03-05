@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 export default function SearchBar({
   wrapper = false,
   styles = "",
-  initialQ,
-  initialLocation,
+  initialQ = "",
+  initialLocation = "",
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -62,6 +62,9 @@ export default function SearchBar({
             id="location"
             className="w-75 h-14.25 border-b text-[16px] pl-2"
           >
+            <option value="" disabled>
+              Select a location
+            </option>
             <option value="dhaka">Dhaka, Bangladesh</option>
             <option value="florence">Florence, Italy</option>
           </select>

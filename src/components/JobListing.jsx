@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 async function getJobs({ q, location }) {
   const params = new URLSearchParams();
   if (q) params.set("q", q);
@@ -48,12 +50,12 @@ export default async function JobsListing({ q, location }) {
                 </span>
               </div>
 
-              <a
+              <Link
                 href={`/jobs/${job._id}`}
                 className="mt-4 inline-block text-sm font-semibold text-[#4640DE]"
               >
                 View details →
-              </a>
+              </Link>
             </article>
           ))}
         </div>
