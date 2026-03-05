@@ -8,35 +8,37 @@ export default function ApplyNow({ jobId }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setMsg(null);
-    setLoading(true);
 
-    const form = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+    const form = new FormData(formElement);
 
     const payload = {
       job_id: jobId,
-      name: String(form.get("name") || ""),
-      email: String(form.get("email") || ""),
-      resume_link: String(form.get("resume_link") || ""),
-      cover_note: String(form.get("cover_note") || ""),
+      name: form.get("name"),
+      email: form.get("email"),
+      resume_link: form.get("resume_link"),
+      cover_note: form.get("cover_note"),
     };
 
     try {
+      setLoading(true);
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/applications`,
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify(payload),
         },
       );
 
-      if (!res.ok) throw new Error("Request failed");
+      if (!res.ok) throw new Error();
 
-      setMsg("Application submitted successfully!");
-      e.currentTarget.reset();
-    } catch (err) {
-      setMsg("Failed to submit. Please try again.");
+      formElement.reset();
+      setMsg("Application submitted!");
+    } catch {
+      setMsg("Submission failed.");
     } finally {
       setLoading(false);
     }
@@ -99,7 +101,9 @@ export default function ApplyNow({ jobId }) {
         {loading ? "Submitting..." : "Submit Application"}
       </button>
 
-      {msg && <p className="text-sm text-gray-700">{msg}</p>}
+      {msg && (
+        <p className="text-sm text-green-700 font-bold text-center">{msg}</p>
+      )}
     </form>
   );
 }
