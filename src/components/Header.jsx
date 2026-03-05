@@ -1,7 +1,13 @@
+"use client";
+
+import navData from "@data/Nav";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathName = usePathname();
+
   return (
     <header className="h-15 sticky z-50 top-0 inset-x-0 flex items-center bg-[#F8F8FD] shadow-[0_-1px_0_0_#D6DDEB]">
       <div className="wrapper flex justify-between items-center">
@@ -17,12 +23,14 @@ export default function Header() {
           </Link>
           <nav className="hidden lg:block">
             <ul className="flex items-center gap-x-4 text-[16px] text-[#515B6F] font-medium">
-              <li>
-                <Link href={"/jobs"}>Find jobs</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Browse Companies</Link>
-              </li>
+              {navData.map((navItem, i) => (
+                <li
+                  key={i}
+                  className={`${pathName === navItem.href && "text-[#4640DE] underline underline-offset-4"}`}
+                >
+                  <Link href={navItem.href}>{navItem.name}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
