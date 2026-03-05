@@ -13,7 +13,12 @@ export default async function JobListingPage({ searchParams }) {
   return (
     <main>
       <Header />
-      <SearchBar wrapper={true} styles="mx-auto border rounded-md mt-2" />
+      <SearchBar
+        initialQ={q}
+        initialLocation={location}
+        wrapper={true}
+        styles="mx-auto border rounded-md mt-2"
+      />
       <section className="wrapper">
         <Suspense fallback={<JobsListingSkeleton />}>
           <JobListing q={q} location={location} />

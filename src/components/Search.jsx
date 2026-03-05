@@ -1,17 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function SearchBar({ wrapper = false, styles = "" }) {
+export default function SearchBar({
+  wrapper = false,
+  styles = "",
+  initialQ,
+  initialLocation,
+}) {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  // Read initial values from URL (works on /jobs and also if / has params)
-  const initialQ = searchParams.get("q") || "";
-  const initialLocation = searchParams.get("location") || "dhaka";
 
   const [q, setQ] = useState(initialQ);
   const [location, setLocation] = useState(initialLocation);
