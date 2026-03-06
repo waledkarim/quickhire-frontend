@@ -43,7 +43,7 @@ export default function Home() {
           src="/images/pattern-hero.png"
           width={860}
           height={794}
-          className="hidden lg:block absolute z-10 right-1/12 bottom-0 h-[95%] w-auto"
+          className="hidden lg:block absolute z-10 right-1/12 bottom-0 w-auto"
         />
       </section>
 

@@ -56,9 +56,9 @@ export default function ApplyNowForm({ jobId }) {
     if (Object.keys(validationErrors).length > 0) return;
 
     const payload = {
-      full_name: formData.get("full_name").trim(),
+      name: formData.get("full_name").trim(),
       email: formData.get("email").trim(),
-      cover_letter: formData.get("cover_letter").trim(),
+      cover_note: formData.get("cover_letter").trim(),
       resume_link: formData.get("resume_link").trim(),
       job_id: jobId,
     };
