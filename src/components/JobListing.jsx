@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RightArrow from "./icons/RightArrow";
 
 async function getJobs({ q, location }) {
   const params = new URLSearchParams();
@@ -33,7 +34,10 @@ export default async function JobsListing({ q, location }) {
       ) : (
         <div className="grid gap-4 md:grid-cols-2">
           {jobs.map((job) => (
-            <article key={job._id} className="rounded-xl border bg-white p-5">
+            <article
+              key={job._id}
+              className="rounded-xl border border-[#D6DDEB] bg-white p-5"
+            >
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-base font-semibold">{job.title}</h3>
@@ -52,9 +56,9 @@ export default async function JobsListing({ q, location }) {
 
               <Link
                 href={`/jobs/${job._id}`}
-                className="mt-4 inline-block text-sm font-semibold text-[#4640DE]"
+                className="mt-4 text-sm font-semibold text-[#4640DE] flex gap-x-2"
               >
-                View details →
+                View details <RightArrow />
               </Link>
             </article>
           ))}
