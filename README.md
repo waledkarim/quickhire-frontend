@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QuickHire – Frontend
 
-## Getting Started
+This is the frontend for **QuickHire**, a simple job board application where users can browse job listings, view job details, and apply for jobs.
 
-First, run the development server:
+It was built based on the provided Figma design for the technical assessment. This is the github link for the QuickHire Backend repo: https://github.com/waledkarim/quickhire-backend. The QuickHire frontend has been deployed on Vercel, link: https://quickhire-frontend-phi.vercel.app/
+
+
+## Main Tech Stack
+
+- Next.js v16
+- React v19
+- Tailwind CSS v4
+
+# ✨ Features
+
+### Job Listings Page
+
+- Displays all available jobs
+- Search functionality
+- Filter by category and location
+
+### Job Details Page
+
+- Full job description
+- Apply Now form
+  - Name
+  - Email
+  - Resume link
+  - Cover note
+
+### Admin Panel
+
+- Create new job listings
+- Delete job listings
+- View job information
+
+### UI/UX Enhancements
+
+- Loading skeletons
+- Error boundaries
+- Fully responsive design
+- Reusable components
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/quickhire-frontend.git
+cd quickhire-frontend
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Configure environment variables
+Create .env.local file:
+
+```bash
+NEXT_PUBLIC_API_BASE_URL = http://localhost:5000
+API_BASE_URL = http://localhost:5000
+```
+### 4️⃣ Start the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
