@@ -20,7 +20,7 @@ export default function AdminStats({ jobs }) {
 
       <div className="border border-[#D6DDEB] rounded-xl p-6 bg-white shadow-sm">
         <p className="text-sm text-gray-500">Most Popular Job</p>
-        <h2 className="text-lg font-semibold mt-2">
+        <h2 className="text-lg font-semibold mt-2 text-[#4640DE]">
           {jobs.sort(
             (a, b) => (b.applicationCount || 0) - (a.applicationCount || 0),
           )[0]?.title || "N/A"}
