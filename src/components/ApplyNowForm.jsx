@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function ApplyNow({ jobId }) {
+export default function ApplyNowForm({ jobId }) {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
   const [status, setStatus] = useState(""); // "success" | "error"

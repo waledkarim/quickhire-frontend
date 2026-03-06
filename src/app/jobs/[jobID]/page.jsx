@@ -1,5 +1,5 @@
 import Header from "@components/Header";
-import ApplyNow from "@components/ApplyNow";
+import ApplyNowForm from "@components/ApplyNowForm";
 
 async function getJob(jobID) {
   const res = await fetch(`${process.env.API_BASE_URL}/api/jobs/${jobID}`, {
@@ -61,7 +61,7 @@ export default async function JobDetailsPage({ params }) {
                 </p>
 
                 <div className="mt-5">
-                  <ApplyNow jobId={job._id} />
+                  <ApplyNowForm jobId={job._id} />
                 </div>
               </div>
             </div>
