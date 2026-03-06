@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function ApplyNowForm({ jobId }) {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
-  const [status, setStatus] = useState(""); // "success" | "error"
+  const [status, setStatus] = useState("");
   const [errors, setErrors] = useState({});
 
   const validateForm = (formData) => {

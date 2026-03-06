@@ -18,7 +18,7 @@ export default function Home() {
     <main>
       <Header />
 
-      <section className="bg-[#F8F8FD] flow-root">
+      <section className="bg-[#F8F8FD] flow-root relative">
         <div className="wrapper mt-4 lg:mt-20.5 mb-4 lg:mb-25.75">
           <h1 className="mb-5.75">
             Discover <br /> more than <br />
@@ -28,11 +28,23 @@ export default function Home() {
             Great platform for the job seeker that searching for new career
             heights and passionate about startups.
           </p>
-          <SearchBar />
+          <SearchBar styles="relative z-30" />
           <p className="text-[16px] font-medium">
             Popular : UI Designer, UX Researcher, Android, Admin
           </p>
         </div>
+        <Image
+          src="/images/hero-man.png"
+          width={838}
+          height={1037}
+          className="hidden lg:block absolute z-20 right-0 bottom-0 h-[95%] w-auto"
+        />
+        <Image
+          src="/images/pattern-hero.png"
+          width={860}
+          height={794}
+          className="hidden lg:block absolute z-10 right-1/12 bottom-0 h-[95%] w-auto"
+        />
       </section>
 
       <section className="wrapper py-10 lg:py-12">

@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 inset-x-0 z-50 bg-[#F8F8FD] shadow-[0_-1px_0_0_#D6DDEB]">
+    <header className="bg-[#F8F8FD] shadow-[0_-1px_0_0_#D6DDEB]">
       <div className="h-15 flex items-center">
         <div className="wrapper flex justify-between items-center">
           <div className="flex items-center gap-x-12">
