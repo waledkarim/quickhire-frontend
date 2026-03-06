@@ -3,12 +3,15 @@ import FeaturedJobs from "@components/FeaturedJobs";
 import Header from "@components/Header";
 import RightArrow from "@components/icons/RightArrow";
 import LatestJobs from "@components/LatestJobs";
+import FeaturedJobsSkeleton from "@components/loading/FeaturedJobsSkeleton";
+import LatestJobsSkeleton from "@components/loading/LatestJobsSkeleton";
 import SearchBar from "@components/Search";
 import categories from "@data/Categories";
 import companies from "@data/Companies";
 import socials from "@data/Socials";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -121,7 +124,9 @@ export default function Home() {
             <RightArrow />
           </Link>
         </div>
-        <FeaturedJobs />
+        <Suspense fallback={<FeaturedJobsSkeleton />}>
+          <FeaturedJobs />
+        </Suspense>
         <Link
           href={"/jobs"}
           className="lg:hidden flex items-center gap-x-3 text-[16px] text-[#4640DE] font-semibold"
@@ -145,7 +150,9 @@ export default function Home() {
               <RightArrow />
             </Link>
           </div>
-          <LatestJobs />
+          <Suspense fallback={<LatestJobsSkeleton />}>
+            <LatestJobs />
+          </Suspense>
         </div>
       </section>
 
