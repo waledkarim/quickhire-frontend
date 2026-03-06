@@ -48,7 +48,8 @@ export default function ApplyNowForm({ jobId }) {
     setMsg("");
     setStatus("");
 
-    const formData = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
 
     const validationErrors = validateForm(formData);
     setErrors(validationErrors);
@@ -86,7 +87,7 @@ export default function ApplyNowForm({ jobId }) {
       setStatus("success");
       setMsg("Application submitted successfully.");
       setErrors({});
-      e.currentTarget.reset();
+      formElement.reset();
     } catch (error) {
       setStatus("error");
       setMsg(error.message || "Something went wrong.");
