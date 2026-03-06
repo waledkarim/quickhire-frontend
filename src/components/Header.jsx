@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#F8F8FD] shadow-[0_-1px_0_0_#D6DDEB]">
+    <header className="relative bg-[#F8F8FD] shadow-[0_-1px_0_0_#D6DDEB]">
       <div className="h-15 flex items-center">
         <div className="wrapper flex justify-between items-center">
           <div className="flex items-center gap-x-12">
@@ -90,9 +90,9 @@ export default function Header() {
   );
 }
 
-function MobileMenu({ handleCloseMenu, pathName }) {
+export function MobileMenu({ handleCloseMenu, pathName }) {
   return (
-    <div className="lg:hidden border-t border-[#D6DDEB] bg-[#F8F8FD] absolute top-full inset-x-0 ">
+    <div className="lg:hidden border-t border-[#D6DDEB] bg-[#F8F8FD] absolute top-full inset-x-0 z-50 ">
       <div className="wrapper py-4">
         <nav>
           <ul className="flex flex-col gap-y-4 text-[16px] text-[#515B6F] font-medium">
