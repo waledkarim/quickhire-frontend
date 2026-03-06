@@ -15,9 +15,8 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 export const metadata = {
-  title: "WaledJobs",
-  description:
-    "A simple job board application created as a task of QTec Solution Limited.",
+  title: "QuickHire",
+  description: "A simple job board application",
 };
 
 export default function RootLayout({ children }) {
