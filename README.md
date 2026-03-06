@@ -5,6 +5,7 @@ This is the frontend for **QuickHire**, a simple job board application where use
 It was built based on the provided Figma design for the technical assessment. This is the github link for the QuickHire Backend repo: https://github.com/waledkarim/quickhire-backend.
 
 ### Deployment
+
 The QuickHire frontend has been deployed on Vercel, link: https://quickhire-frontend-phi.vercel.app/
 
 ## Main Tech Stack
@@ -12,6 +13,17 @@ The QuickHire frontend has been deployed on Vercel, link: https://quickhire-fron
 - Next.js v16
 - React v19
 - Tailwind CSS v4
+
+## Validation
+
+- Required fields must be provided
+- Email must be properly formatted
+- Resume link must be a valid URL
+- The Job description field must be less than 20 chars.
+
+## Note
+
+**Ensure your backend server is running**
 
 # ✨ Features
 
