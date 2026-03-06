@@ -2,8 +2,10 @@
 
 This is the frontend for **QuickHire**, a simple job board application where users can browse job listings, view job details, and apply for jobs.
 
-It was built based on the provided Figma design for the technical assessment. This is the github link for the QuickHire Backend repo: https://github.com/waledkarim/quickhire-backend. The QuickHire frontend has been deployed on Vercel, link: https://quickhire-frontend-phi.vercel.app/
+It was built based on the provided Figma design for the technical assessment. This is the github link for the QuickHire Backend repo: https://github.com/waledkarim/quickhire-backend.
 
+### Deployment
+The QuickHire frontend has been deployed on Vercel, link: https://quickhire-frontend-phi.vercel.app/
 
 ## Main Tech Stack
 
@@ -55,12 +57,14 @@ npm install
 ```
 
 ### 3️⃣ Configure environment variables
+
 Create .env.local file:
 
 ```bash
 NEXT_PUBLIC_API_BASE_URL = http://localhost:5000
 API_BASE_URL = http://localhost:5000
 ```
+
 ### 4️⃣ Start the dev server
 
 ```bash
