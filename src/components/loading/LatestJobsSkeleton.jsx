@@ -1,7 +1,7 @@
 export default function LatestJobsSkeleton() {
   return (
     <div className="latestjobs-grid mb-10 lg:mb-15">
-      {Array.from({ length: 9 }).map((_, i) => (
+      {Array.from({ length: 8 }).map((_, i) => (
         <div
           key={i}
           className="p-4 bg-white flex flex-col gap-6 lg:flex-row animate-pulse"

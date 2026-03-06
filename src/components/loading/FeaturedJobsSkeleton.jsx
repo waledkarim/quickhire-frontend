@@ -1,7 +1,7 @@
 export default function FeaturedJobsSkeleton() {
   return (
     <div className="featuredjobs-grid mb-6 lg:mb-0 overflow-x-auto lg:overflow-x-hidden">
-      {Array.from({ length: 9 }).map((_, i) => (
+      {Array.from({ length: 8 }).map((_, i) => (
         <div
           key={i}
           className="grid grid-rows-subgrid row-span-4 p-6 w-71.5 border border-[#D6DDEB]"
