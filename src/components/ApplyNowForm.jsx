@@ -156,7 +156,7 @@ export default function ApplyNowForm({ jobId }) {
 
       {msg && (
         <p
-          className={`text-sm ${
+          className={`text-sm text-center font-bold ${
             status === "success" ? "text-green-700" : "text-red-600"
           }`}
         >
