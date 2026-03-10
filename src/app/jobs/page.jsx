@@ -22,7 +22,7 @@ export default async function JobListingPage({ searchParams }) {
         styles="mx-auto border rounded-md mt-2"
       />
       <section className="wrapper">
-        <Suspense fallback={<JobsListingSkeleton />}>
+        <Suspense key={`${q}-${location}`} fallback={<JobsListingSkeleton />}>
           <JobListing q={q} location={location} />
         </Suspense>
       </section>
