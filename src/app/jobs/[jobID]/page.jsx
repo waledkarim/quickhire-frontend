@@ -1,5 +1,5 @@
-import Header from "@components/Header";
-import ApplyNowForm from "@components/ApplyNowForm";
+import Header from "@components/ui/Header";
+import ApplyNowForm from "@components/jobs/ApplyNowForm";
 
 async function getJob(jobID) {
   const res = await fetch(`${process.env.API_BASE_URL}/api/jobs/${jobID}`, {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import RightArrow from "./icons/RightArrow";
+import RightArrow from "@components/icons/RightArrow";
 
 async function getJobs({ q, location }) {
   const params = new URLSearchParams();

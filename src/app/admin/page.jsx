@@ -1,7 +1,7 @@
-import Header from "@components/Header";
-import CreateJobForm from "@components/CreateJobForm";
-import AdminJobTable from "@components/AdminJobTable";
-import AdminStats from "@components/AdminStats";
+import Header from "@components/ui/Header";
+import CreateJobForm from "@components/admin/CreateJobForm";
+import AdminJobTable from "@components/admin/AdminJobTable";
+import AdminStats from "@components/admin/AdminStats";
 
 async function getJobs() {
   const res = await fetch(`${process.env.API_BASE_URL}/api/jobs`, {

@@ -1,7 +1,7 @@
-import Header from "@components/Header";
-import JobListing from "@components/JobListing";
-import JobsListingSkeleton from "@components/loading/JobsListingSkeleton";
-import SearchBar from "@components/Search";
+import Header from "@components/ui/Header";
+import JobListing from "@components/jobs/JobListing";
+import JobsListingSkeleton from "@components/jobs/JobsListingSkeleton";
+import SearchBar from "@components/ui/Search";
 import { Suspense } from "react";
 
 export default async function JobListingPage({ searchParams }) {
