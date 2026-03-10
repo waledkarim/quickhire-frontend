@@ -115,12 +115,18 @@ export function MobileMenu({ handleCloseMenu, pathName }) {
         </nav>
 
         <div className="mt-6 flex flex-col gap-y-3">
-          <button className="w-full bg-white text-[#4640DE] text-[16px] font-bold py-3 px-6 border border-[#D6DDEB]">
+          <Link
+            href={"/login"}
+            className="w-full bg-white text-[#4640DE] text-[16px] font-bold py-3 px-6 border border-[#D6DDEB]"
+          >
             Login
-          </button>
-          <button className="w-full bg-[#4640DE] text-white text-[16px] font-bold py-3 px-6">
+          </Link>
+          <Link
+            href={"/sign-up"}
+            className="w-full bg-[#4640DE] text-white text-[16px] font-bold py-3 px-6"
+          >
             Sign Up
-          </button>
+          </Link>
         </div>
       </div>
     </div>
