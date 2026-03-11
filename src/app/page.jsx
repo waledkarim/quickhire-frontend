@@ -1,4 +1,4 @@
-import CategoryCards from "@components/CategoryCards";
+import CategoryCards from "@components/home/CategoryCards";
 import FeaturedJobs from "@components/home/FeaturedJobs";
 import Header from "@components/ui/Header";
 import RightArrow from "@components/icons/RightArrow";

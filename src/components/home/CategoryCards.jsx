@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import RightArrow from "./icons/RightArrow";
+import RightArrow from "../icons/RightArrow";
 
 export default function CategoryCards(props) {
   return (
