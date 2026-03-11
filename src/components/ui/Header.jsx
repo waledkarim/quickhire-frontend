@@ -73,12 +73,18 @@ export default function Header() {
           </button>
 
           <div className="hidden lg:flex items-center gap-x-8">
-            <button className="bg-white text-[#4640DE] text-[16px] font-bold py-3 px-6">
+            <Link
+              href={"/login"}
+              className="bg-white text-[#4640DE] text-[16px] font-bold py-3 px-6"
+            >
               Login
-            </button>
-            <button className="bg-[#4640DE] text-white text-[16px] font-bold py-3 px-6">
+            </Link>
+            <Link
+              href={"/sign-up"}
+              className="bg-[#4640DE] text-white text-[16px] font-bold py-3 px-6"
+            >
               Sign Up
-            </button>
+            </Link>
           </div>
         </div>
       </div>
